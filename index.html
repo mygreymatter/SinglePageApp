@@ -8,6 +8,7 @@
     <!-- load bootstrap and fontawesome via CDN -->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- SPELLS -->
     <!-- load angular and angular route via CDN -->
@@ -42,7 +43,7 @@
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
     <div id="main" class="container">
 
-        <div ng-view></div>
+        <div class="{{pageClass}}" ng-view></div>
         <!-- angular templating -->
         <!-- this is where content will be injected -->
 
