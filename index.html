@@ -14,10 +14,11 @@
     <!-- load angular and angular route via CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
-
     <script src="app.js"></script>
-    <base href="/">
+
+    <!--<base href="/">-->
 </head>
 
 <body ng-controller="MainController">
@@ -32,9 +33,9 @@
                 </div>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="/about"><i class="fa fa-shield"></i> About</a></li>
-                    <li><a href="/contact"><i class="fa fa-comment"></i> Contact</a></li>
+                    <li><a ui-sref="home"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a ui-sref="about"><i class="fa fa-shield"></i> About</a></li>
+                    <li><a ui-sref="contact"><i class="fa fa-comment"></i> Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,7 +44,7 @@
     <!-- MAIN CONTENT AND INJECTED VIEWS -->
     <div id="main" class="container">
 
-        <div class="{{pageClass}}" ng-view></div>
+        <div class="{{pageClass}}" ui-view></div>
         <!-- angular templating -->
         <!-- this is where content will be injected -->
 

@@ -2,3 +2,13 @@
     <h1>{{pageClass | titleCase}} Page</h1>
     <p>{{ message }}</p>
 </div>
+
+
+<div class="row">
+    <div class="col-sm-6">
+        <div ui-view="columnOne"></div>
+    </div>
+    <div class="col-sm-6">
+        <div ui-view="columnTwo"></div>
+    </div>
+</div>
